@@ -2,7 +2,7 @@ import os
 
 
 nome_arquivo = "funcionarios.txt"
-funcionario = {"Nome":"","CPF":0,"Telefone":0}
+funcionario = {"Nome":"","Idade":0, CPF":0,"Telefone":0}
 
 
 
