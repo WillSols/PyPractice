@@ -2,7 +2,7 @@ import os
 
 
 nome_arquivo = "funcionarios.txt"
-funcionario = {"Nome":"","Idade":0, CPF":0,"Telefone":0}
+funcionario = {"Nome":"","CPF":0,"Telefone":0}
 
 
 
@@ -33,6 +33,7 @@ def IsAlpha(text):
         if t:
             break
     return value
+
 if not os.path.exists(nome_arquivo):
     arquivo_cadastro = open(nome_arquivo, "w+t")
     arquivo_cadastro.close()
@@ -53,8 +54,9 @@ def salvar_funcionario(funcionario):
 while True:
     print('Escolha uma operação: ')
     print('1 - Cadastrar funcionário')
-    print('2 - Consultar ( nome, cpf, telefone)')
-    print('3 - Finalizar Programa')
+    print('2 - Consultar ( nome, idade, cpf, telefone)')
+    print('3 - Relatório de idades')
+    print('4 - Finalizar Programa')
 
     op = int(input('Escolha uma operação: ')) 
 
@@ -68,13 +70,29 @@ while True:
 
         salvar_funcionario(funcionario)
 
-    if op == 2:
+    elif op == 2:
         y = str(input("Digite o CPF:"))
         with open("funcionarios.txt", 'r') as f:
             for line in f:
                 if y  in line:
                     print(line)
-            
-                
-    if op == 3:
+
+    elif op == 3:
+        Idade = str(input("Insira da Idade desejada:")) 
+        count = 0
+        with open("funcionarios.txt", 'r') as f:
+            for lines in f:
+                if Idade in lines:
+                    print(lines)
+                else:
+                    pass
+        with open("funcionarios.txt", 'r') as f:  
+            for lines in f:
+                if Idade in lines:
+                    count =+ len(Idade)
+                    print("Numero de pessoas com essa Idade:", count)
+                else:
+                    pass
+       
+    elif op == 4:
         break
