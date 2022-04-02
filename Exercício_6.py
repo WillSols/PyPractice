@@ -61,6 +61,7 @@ while True:
     if op == 1:
 
         funcionario["Nome"] = IsAlpha("Digite o nome do funcionário:")
+        funcionario["Idade"] = IsNum("Digite a idade do funcionário:")
         funcionario["CPF"] = IsNum("Digite o CPF do funcionário:")
         funcionario["Telefone"] = IsNum("Digite o telefone do funcionário:")
 
