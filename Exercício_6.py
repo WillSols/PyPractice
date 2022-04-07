@@ -93,5 +93,5 @@ while True:
         print("Numero de pessoas com essa Idade:", count)
                
        
-    elif op == 4:
+    elif op == 4: 
         break 
