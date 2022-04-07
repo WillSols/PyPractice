@@ -90,9 +90,8 @@ while True:
             for lines in f:
                 if Idade in lines:
                     count =+ len(Idade)
-                    print("Numero de pessoas com essa Idade:", count)
-                else:
-                    pass
+        print("Numero de pessoas com essa Idade:", count)
+               
        
     elif op == 4:
         break 
